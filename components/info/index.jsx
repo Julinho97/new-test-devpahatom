@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import  Image from "next/image"
 
 import { Button } from "/components/ui/button";
 
@@ -13,11 +14,14 @@ export const Info = ({ col, className }) => {
             {["col-4", "profil"].includes(col) && (
               <div className="frame-4  justify-between flex pl-3  p-4">
                 {col === "profil" && (
-                  <img
-                    className="ellipse"
-                    alt="Ellipse"
-                    src={"/images/ellipse-1.png"}
-                  />
+                  <Image
+                  src="/images/ellipse-1.png"
+                  width={50}
+                  height={50}
+                  color=" rgba(21, 163, 110, 1)"
+                  alt="Souleymaner"
+                />
+  
                 )}
                 <div className="div-2">
                   {col === "profil" && (

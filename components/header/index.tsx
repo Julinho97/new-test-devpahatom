@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
+import Image from "next/image";
 // import "./style.css";
 
-export const Header = ({ property1, ellipse = "ellipse-1.png" }) => {
+export const Header = ({ property1 }) => {
     return (
         <nav className="">
             <div className="header  ">
@@ -10,7 +11,13 @@ export const Header = ({ property1, ellipse = "ellipse-1.png" }) => {
                     {property1 === "default" && (
                         <>
                             <div className="text-wrapper ">Souleymane</div>
-                            <img className="ellipse" alt="Souleymane" src={'/images/ellipse-1.png'} />
+                            <div className="ellipse">
+                            <Image
+                                src="/images/ellipse-1.png"
+                                width={50}
+                                height={50}
+                                alt="Souleymaner"
+                            /></div>
                         </>
                     )}
 

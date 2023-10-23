@@ -77,14 +77,14 @@ body {
   @apply bg-[color:var(--white)] shadow-[15px_-6px_24px_#00000040] h-[70px] w-[1670px] fixed  top-0 z-50;
 }
 .header .group {
-  @apply relative left-3;
+  @apply relative left-12;
 }
 .header .text-wrapper {
-  @apply text-[color:var(--bluedark)]  text-lg font-medium tracking-[0] leading-[normal] absolute text-center left-[190px] w-32  top-2;
+  @apply text-[color:var(--bluedark)]  text-lg font-medium tracking-[0] leading-[normal] absolute text-center left-[270px] w-32  top-2;
   font-family: "Quicksand-Medium", Helvetica;
 }
 .header .ellipse {
-  @apply h-10 object-cover absolute w-10 right-0 left-[304px] top-0;
+  @apply h-10 object-cover absolute w-10 right-0 left-[404px] top-0;
 }
 .header .rectangle {
   @apply bg-[color:var(--slate)] h-[33px] absolute w-[117px] rounded-[80px] left-0 top-0;
