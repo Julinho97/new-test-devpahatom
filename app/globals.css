@@ -1,0 +1,1356 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+
+  --vertdark: rgba(87, 204, 153, 1);
+  --grey-dart: #818181;
+
+  --bluedark: rgba(25, 31, 54, 1);
+ 
+
+  /* sideBar */
+  --bleumiddle: rgba(21, 163, 110, 1);
+  --greydark: rgba(129, 129, 129, 1);
+  --slate: rgba(242, 242, 242, 1);
+  --vertdark: rgba(87, 204, 153, 1);
+
+
+  /* Td */
+  --greymiddle: rgba(166, 166, 166, 1);
+  --noir: rgba(18, 19, 15, 1);
+  --td-font-family: "Nunito-Medium", Helvetica;
+  
+  --td-letter-spacing: 0px;
+  --td-line-height: normal;
+  --white: rgba(255, 255, 254, 1);
+  --bluesea: rgba(29, 141, 244, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  @apply text-[rgb(var(--foreground-rgb))] bg-[#f2f2f2];
+}
+/* Liste Main */
+.liste {
+  @apply bg-[#f2f2f2] flex flex-row justify-center;
+}
+.liste .div-4 {
+  @apply bg-[color:var(--slate)] h-[124px] relative w-[1440px];
+}
+.liste .header-instance {
+  @apply absolute left-[250px] top-0;
+}
+.liste .sidebar-instance {
+  @apply absolute left-0 top-0;
+}
+.liste .property-1-variant4 {
+  @apply h-[100px] relative w-[100px];
+}
+.liste .text-wrapper-11 {
+  @apply text-[color:var(--black)] text-[26px] font-semibold tracking-[0] leading-[normal] absolute text-center left-[270px] top-[89px];
+  font-family: "Poppins-SemiBold", Helvetica;
+}
+.liste .influenceur-search-card {
+  @apply absolute left-[270px] top-36;
+}
+.liste .table-card-instance {
+  @apply absolute left-[270px] top-[314px];
+}
+.liste .icnes {
+  @apply h-2.5 relative w-2.5;
+}
+
+/* HEader */
+.header {
+  @apply bg-[color:var(--white)] shadow-[15px_-6px_24px_#00000040] h-[70px] w-[1670px] fixed  top-0 z-50;
+}
+.header .group {
+  @apply relative left-3;
+}
+.header .text-wrapper {
+  @apply text-[color:var(--bluedark)]  text-lg font-medium tracking-[0] leading-[normal] absolute text-center left-[190px] w-32  top-2;
+  font-family: "Quicksand-Medium", Helvetica;
+}
+.header .ellipse {
+  @apply h-10 object-cover absolute w-10 right-0 left-[304px] top-0;
+}
+.header .rectangle {
+  @apply bg-[color:var(--slate)] h-[33px] absolute w-[117px] rounded-[80px] left-0 top-0;
+}
+.header .div {
+  @apply bg-[color:var(--slate)] h-[33px] absolute w-[33px] rounded-[80px] left-[130px] top-0;
+}
+.header .mockup {
+  @apply h-[33px] w-[163px] left-[998px] top-[18px];
+}
+.header .default {
+  @apply h-10 w-[146px] left-[1021px] top-[15px];
+}
+
+/* SideBare */
+.sidebar {
+  @apply items-center bg-[color:var(--white)] fixed inline-flex flex-col h-[850px] justify-between  px-0 py-[65px] left-[0vh] bottom-[0vh] top-0  z-50 max-w-4xl transition-transform -translate-x-full sm:translate-x-0;
+}
+.sidebar .frame-2 {
+  @apply items-center inline-flex flex-[0_0_auto] flex-col relative;
+}
+.sidebar .vimpopuli {
+  @apply text-[color:var(--vertdark)] text-lg font-bold tracking-[0] leading-[normal] py-[25px] relative text-center;
+  font-family: "Nunito-Bold", Helvetica;
+}
+.sidebar .div-2 {
+  @apply items-start flex flex-col h-[1024px] justify-between relative w-[250px];
+}
+.sidebar .general {
+  @apply self-stretch flex  flex-col gap-3 relative w-full;
+}
+.sidebar .input-menu-instance {
+  @apply flex-[0_0_auto];
+}
+.sidebar .instance-node {
+  @apply text-[#818181];
+}
+.sidebar .rectangle-2 {
+  @apply bg-[color:var(--slate)] h-[33px] relative w-[190px] rounded-[80px];
+}
+.sidebar .general-2 {
+  @apply self-stretch flex flex-[0_0_auto] flex-col gap-2.5 relative mb-14 w-full;
+}
+.sidebar .logo-instance {
+  @apply h-[100px] relative w-[100px];
+}
+.sidebar .dashboard {
+  @apply items-start;
+}
+.sidebar .mockup {
+  @apply items-center justify-center;
+}
+.sidebar .page-dashboard {
+  @apply items-start;
+}
+.sidebar .page-mockup {
+  @apply items-center justify-center;
+}
+
+/* LOgo */
+.logo {
+  @apply h-[100px] relative w-[100px];
+}
+.logo .calque {
+  @apply h-[88px] absolute w-[83px] left-[7px] top-1.5;
+}
+/* Label logo */
+.label {
+  @apply h-[25px] w-[109px] h-[39px] w-[165px];
+}
+.label .vimpopuli {
+  @apply text-[#57cc99] text-lg font-bold tracking-[0] leading-[normal] fixed text-center gap-[1] left-0 top-0;
+  font-family: "Nunito-Bold", Helvetica;
+}
+
+/* Input Menu */
+.input-menu {
+  @apply items-center relative text-[color:var(--grey-dart)];
+}
+.input-menu .rectangle {
+  @apply bg-[color:var(--bleumiddle)] h-[50px] relative w-1 rounded-[0px_2px_2px_0px];
+}
+.input-menu .frame {
+  @apply items-end inline-flex flex-[0_0_auto] gap-2.5 relative;
+}
+.input-menu .ic-nes {
+  @apply h-[25px] relative w-[25px];
+}
+.input-menu .text-wrapper {
+  @apply text-[color:var(--vertdark)] text-base font-medium tracking-[0] leading-[normal] relative text-center w-fit gap-5 relative;
+  font-family: "Nunito-Medium", Helvetica;
+}
+.input-menu .div {
+  @apply text-[color:var(--greydark)] text-base font-medium tracking-[0] leading-[normal] relative text-center w-fit;
+  font-family: "Nunito-Medium", Helvetica;
+}
+.input-menu .ic-nes-instance {
+  @apply h-5 relative w-5;
+}
+.input-menu .text-wrapper-2 {
+  @apply text-lg font-normal tracking-[0] leading-[normal] relative text-center w-fit -mt-px;
+  font-family: "Poppins-Regular", Helvetica;
+}
+.input-menu .text-wrapper-3 {
+  @apply text-lg font-normal tracking-[0] leading-[normal] relative text-center w-fit -mt-px;
+  font-family: "Poppins-Regular", Helvetica;
+}
+.input-menu.activity {
+  @apply flex gap-2.5 h-[50px] w-[250px] pl-[30px] pr-0 py-0;
+}
+.input-menu.dashboard {
+  @apply bg-[color:var(--vertlight)] flex gap-[30px] w-[250px] pl-0 pr-[30px] py-0 rounded-[0px_8px_8px_0px];
+}
+.input-menu.influencer {
+  @apply flex gap-2.5 h-[50px] w-[250px] pl-[30px] pr-0 py-0;
+}
+.input-menu.profil {
+  @apply inline-flex gap-2.5 justify-center;
+}
+.input-menu.campaign {
+  @apply flex gap-2.5 h-[50px] w-[250px] pl-[30px] pr-0 py-0;
+}
+.input-menu.facturation {
+  @apply inline-flex gap-2.5 justify-center;
+}
+.input-menu.settings {
+  @apply flex gap-2.5 h-[50px] w-[250px] pl-[30px] pr-0 py-0;
+}
+.input-menu.conversion {
+  @apply flex gap-2.5 h-[50px] w-[250px] pl-[30px] pr-0 py-0;
+}
+.input-menu.logout {
+  @apply flex gap-2.5 h-[50px] w-[250px] pl-[30px] pr-0 py-0;
+}
+.input-menu .inactive {
+  @apply text-[color:var(--greydark)];
+}
+.input-menu .active {
+  @apply text-[color:var(--vertdark)];
+}
+.input-menu .state-inactive {
+  @apply text-[color:var(--greydark)];
+}
+.input-menu .state-active {
+  @apply text-[color:var(--vertdark)];
+}
+
+/* influenceur Search */
+.influenceur-search {
+  @apply items-start bg-[color:var(--white)] shadow-[var(--card)] justify-between flex flex-col relative w-[1150px] ml-[400px] my-12 p-[25px] rounded-lg left-0 top-[18vh];
+}
+.influenceur-search .div {
+  @apply items-start flex flex-[0_0_auto] relative w-[1100px] px-11;
+}
+.influenceur-search .recherche-d-une {
+  @apply text-[color:var(--noir)] text-[length:var(--h-2-font-size)] font-[number:var(--h-2-font-weight)] tracking-[var(--h-2-letter-spacing)] leading-[var(--h-2-line-height)] relative text-center w-fit -mt-px;
+  font-family: var(--h-2-font-family);
+  font-style: var(--h-2-font-style);
+}
+.influenceur-search .button-instance {
+  @apply flex h-[35px] w-[132px];
+}
+.influenceur-search .instance-node {
+  @apply mt-[-1.5px];
+}
+.influenceur-search .frame-2 {
+  @apply items-start flex flex-[0_0_auto] relative w-[1100px];
+}
+.influenceur-search .input {
+  @apply w-[300px];
+}
+.influenceur-search .class {
+  @apply w-[1100px];
+}
+.influenceur-search .type-select-labeled-false {
+  @apply inline-flex flex-[0_0_auto] w-[unset];
+  justify-content: unset !important;
+}
+.influenceur-search .class-2 {
+  @apply text-[color:var(--noir)];
+}
+.influenceur-search .type-select-labeled-instance {
+  @apply text-[color:var(--greydark)];
+}
+.influenceur-search .search {
+  @apply justify-between;
+}
+.influenceur-search .campagne {
+  @apply gap-5;
+}
+.influenceur-search .type-search {
+  @apply justify-between;
+}
+.influenceur-search .type-campagne {
+  @apply gap-[50px] justify-around;
+}
+
+/* Influenceurs abes */
+.label .text-wrapper {
+  @apply text-[#6e0c0c] text-[26px] font-semibold tracking-[0] leading-[normal] relative text-center left-0 top-[8vh];
+  font-family: "Poppins-SemiBold", Helvetica;
+}
+
+/* Frame */
+.frame {
+  @apply items-start flex justify-between relative w-[1100px] items-start flex justify-between relative w-[1100px] items-start flex justify-between relative w-[200px];
+}
+.frame .text-wrapper {
+  @apply text-[color:var(--noir)] text-[length:var(--h-2-font-size)] font-[number:var(--h-2-font-weight)] tracking-[var(--h-2-letter-spacing)] leading-[var(--h-2-line-height)] relative text-center w-fit -mt-px text-[color:var(--noir)] text-[length:var(--h-2-font-size)] font-[number:var(--h-2-font-weight)] tracking-[var(--h-2-letter-spacing)] leading-[var(--h-2-line-height)] relative text-center w-fit -mt-px;
+  font-family: var(--h-2-font-family);
+  font-style: var(--h-2-font-style);
+}
+.frame .button-instance {
+  @apply flex h-[35px] w-[132px];
+}
+.frame .design-component-instance-node {
+  @apply mt-[-1.5px];
+}
+
+/* Button */
+.button {
+  @apply items-center inline-flex gap-5 justify-center relative px-[15px] py-2.5 rounded-lg bottom-3;
+}
+.button .nouvelle-campagne {
+  @apply relative text-center w-fit -mt-px;
+}
+.button .ic-nes {
+  @apply h-[15px] relative w-[15px];
+}
+.button .div {
+  @apply text-[length:var(--button-font-size)] font-[number:var(--button-font-weight)] tracking-[var(--button-letter-spacing)] leading-[var(--button-line-height)] relative text-center w-fit -mt-px;
+  font-family: var(--button-font-family);
+  font-style: var(--button-font-style);
+}
+.button .text-wrapper {
+  @apply text-[color:var(--greydark)] text-[length:var(--button-font-size)] font-[number:var(--button-font-weight)] tracking-[var(--button-letter-spacing)] leading-[var(--button-line-height)] relative text-center w-fit -mt-px;
+  font-family: var(--button-font-family);
+  font-style: var(--button-font-style);
+}
+.button.primary {
+  @apply bg-[color:var(--white)] border border-solid;
+}
+.button.calendar {
+  @apply border-[color:var(--greydark)] shadow-[var(--card)];
+}
+.button.secondary {
+  @apply bg-[color:var(--bleumiddle)];
+}
+.button.primary.plus {
+  @apply border-[color:var(--noir)];
+}
+.button.edit.primary {
+  @apply border-[color:var(--noir)];
+}
+.button.default.primary {
+  @apply border-[color:var(--noir)];
+}
+.button.secondary .nouvelle-campagne {
+  @apply text-[color:var(--white)] text-[length:var(--button-font-size)] font-[number:var(--button-font-weight)] tracking-[var(--button-letter-spacing)] leading-[var(--button-line-height)];
+  font-family: var(--button-font-family);
+  font-style: var(--button-font-style);
+}
+.button.primary .nouvelle-campagne {
+  @apply text-[color:var(--noir)] text-xs font-semibold tracking-[0] leading-[normal];
+  font-family: "Nunito-SemiBold", Helvetica;
+}
+.button.secondary .div {
+  @apply text-[color:var(--white)];
+}
+.button.primary .div {
+  @apply text-[color:var(--noir)];
+}
+
+/* Frame 9 Input Search */
+.frame .input {
+  @apply w-[300px];
+}
+.frame .type-select-labeled-false {
+  @apply inline-flex flex-[0_0_auto] gap-2.5 w-[unset];
+  justify-content: unset !important;
+}
+.frame .type-select-labeled-instance {
+  @apply text-[color:var(--greydark)];
+}
+/* Frame9 .type-search-labeled */
+.type-search-labeled {
+  @apply items-center bg-[color:var(--white)] border border-[color:var(--greymiddle)] flex gap-2.5 relative w-[242px] p-2.5 rounded-lg border-solid;
+}
+.type-search-labeled .frame {
+  @apply items-center inline-flex flex-[0_0_auto] gap-2.5 relative;
+}
+.type-search-labeled .ic-nes {
+  @apply flex-[0_0_auto] relative;
+}
+.type-search-labeled .priv-e {
+  @apply text-[color:var(--greydark)] text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)] mt-[-0.5px] relative text-center w-fit;
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+/* Frame 9 .type-select-labeled  */
+.type-select-labeled {
+  @apply items-center bg-[color:var(--white)] border border-[color:var(--greymiddle)] flex justify-between relative w-[242px] p-2.5 rounded-lg border-solid;
+}
+.type-select-labeled .priv-e {
+  @apply text-[color:var(--greendark)] text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)] mt-[-0.5px] relative text-center w-fit;
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.type-select-labeled .ic-nes {
+  @apply flex-[0_0_auto] relative;
+}
+
+/* title Card */
+.box {
+  @apply h-[38px] w-[1100px] h-[66px] w-[600px];
+}
+.box .title-card {
+  @apply h-[38px] fixed w-[1100px] left-0 top-0;
+}
+.box .frame {
+  @apply items-start flex justify-between relative w-[1100px];
+}
+.box .div {
+  @apply items-center inline-flex flex-[0_0_auto] gap-2.5 relative;
+}
+.box .text-wrapper {
+  @apply text-[#12130f] text-base font-medium tracking-[0] leading-[normal] relative text-center w-fit -mt-px;
+  font-family: "Nunito-Medium", Helvetica;
+}
+.box .text-wrapper-2 {
+  @apply text-[#818181] text-lg font-medium tracking-[0] leading-[normal] mt-[-0.5px] relative text-center whitespace-nowrap w-fit;
+  font-family: "Roboto Flex-Medium", Helvetica;
+}
+.box .button {
+  @apply items-center bg-[#15a36e] inline-flex flex-[0_0_auto] gap-2.5 justify-center relative px-[15px] py-2.5 rounded-lg;
+}
+.box .nouvelle-campagne {
+  @apply text-[#fffffe] text-xs font-normal tracking-[0] leading-[normal] relative text-center w-fit -mt-px;
+  font-family: "Poppins-Bold", Helvetica;
+}
+.box .span {
+  @apply font-bold;
+}
+.box .text-wrapper-3 {
+  @apply font-semibold;
+  font-family: "Nunito-SemiBold", Helvetica;
+}
+
+/* STYLE */
+.frame .div {
+  @apply items-center inline-flex flex-[0_0_auto] gap-5 relative;
+}
+.frame .text-wrapper {
+  font-family: var(--h-2-font-family);
+  font-style: var(--h-2-font-style);
+}
+.frame .text-wrapper-2 {
+  @apply text-[color:var(--greydark)] text-lg font-medium tracking-[0] leading-[normal] mt-[-0.5px] relative text-center whitespace-nowrap w-fit;
+  font-family: "Roboto Flex-Medium", Helvetica;
+}
+.frame .button {
+  @apply items-center bg-[color:var(--bleumiddle)] inline-flex flex-[0_0_auto] gap-2.5 justify-center relative px-[15px] py-2.5 rounded-lg;
+}
+.frame .nouvelle-campagne {
+  @apply text-[color:var(--white)] text-[length:var(--button-font-size)] font-[number:var(--button-font-weight)] tracking-[var(--button-letter-spacing)] leading-[var(--button-line-height)] relative text-center w-fit -mt-px;
+  font-family: var(--button-font-family);
+  font-style: var(--button-font-style);
+}
+.frame .span {
+  @apply text-[length:var(--button-font-size)] font-[number:var(--button-font-weight)] tracking-[var(--button-letter-spacing)] leading-[var(--button-line-height)];
+  font-family: var(--button-font-family);
+  font-style: var(--button-font-style);
+}
+
+/* TAble campaing */
+
+/* Table */
+.table-card {
+  @apply items-start bg-[color:var(--white)] shadow-[var(--card)] flex-col gap-5 absolute z-[12] px-[26px] rounded-xl left-[56px] top-[13vh];
+}
+.table-card .title-card {
+  @apply relative;
+}
+.table-card .text-wrapper-7 {
+  @apply text-[color:var(--noir)] text-[length:var(--h-2-font-size)] font-[number:var(--h-2-font-weight)] tracking-[var(--h-2-letter-spacing)] leading-[var(--h-2-line-height)] relative text-center w-fit -mt-px;
+  font-family: var(--h-2-font-family);
+  font-style: var(--h-2-font-style);
+}
+.table-card .text-wrapper-8 {
+  @apply text-[color:var(--greydark)] text-lg font-medium tracking-[0] leading-[normal] mt-[-0.5px] relative text-center whitespace-nowrap w-fit;
+  font-family: "Roboto Flex-Medium", Helvetica;
+}
+.table-card .frame-3 {
+  @apply absolute;
+}
+.table-card .liste-des {
+  @apply relative;
+}
+.table-card .element {
+  @apply relative;
+}
+.box .table-campaigne {
+  @apply h-[366px] fixed w-[1100px] left-0 top-0;
+}
+.box .overlap-group {
+  @apply h-[366px] relative;
+}
+.box .navbar {
+  @apply absolute left-0 top-0;
+}
+.box .frame-3 {
+  @apply items-start inline-flex flex-col absolute left-0 top-[54px];
+}
+.box .icnes {
+  @apply h-2.5 relative w-2.5;
+}
+
+/*  TAbble Th */
+.th {
+  @apply bg-[#f7f7f7] border relative border-solid border-[#d9d9d9];
+}
+.th .text-wrapper-10 {
+  @apply text-[color:var(--greymiddle)] text-[length:var(--th-font-size)] font-[number:var(--th-font-weight)] tracking-[var(--th-letter-spacing)] leading-[var(--th-line-height)] relative text-center whitespace-nowrap w-fit;
+  font-family: var(--th-font-family);
+  font-style: var(--th-font-style);
+}
+.th.search {
+  @apply items-center flex justify-between w-[1100px] px-[25px] py-[19px] rounded-[12px_12px_0px_0px];
+}
+
+/* thechout */
+.type-checkox-labeled {
+  @apply bg-[color:var(--white)] border border-[color:var(--greymiddle)] rounded h-5 relative w-5 border-solid;
+}
+
+/*  Icon */
+.icnes {
+  @apply items-center flex gap-2.5 h-5 justify-center relative w-5;
+}
+.icnes .points {
+  @apply h-5 relative w-5;
+}
+
+/* tR */
+.tr {
+  @apply bg-[color:var(--white)] relative border-b border-[#d9d9d9] border-l border-r;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+}
+.tr .overlap-group {
+  @apply relative flex;
+}
+.tr .frame {
+  @apply items-center bg-[color:var(--white)] border border-[color:var(--greymiddle)] flex gap-2.5 justify-center relative w-20 px-5 py-1.5 rounded-[5px] border-solid left-[135px] top-1;
+}
+.tr .text-wrapper {
+  @apply text-[color:var(--noir)] text-[length:var(--td-font-size)] font-[number:var(--td-font-weight)] tracking-[var(--td-letter-spacing)] leading-[var(--td-line-height)] relative text-center w-fit -mt-px -mx-2.5;
+  font-family: var(--td-font-family);
+  font-style: var(--td-font-style);
+}
+.tr .date {
+  @apply h-9 absolute w-[315px] left-0 top-0;
+}
+.tr .div {
+  @apply text-[color:var(--noir)] text-[length:var(--td-font-size)] font-[number:var(--td-font-weight)] tracking-[var(--td-letter-spacing)] leading-[var(--td-line-height)] absolute text-center left-0 top-0;
+  font-family: var(--td-font-family);
+  font-style: var(--td-font-style);
+}
+.tr .text-wrapper-2 {
+  @apply text-[color:var(--greydark)] text-[length:var(--td-font-size)] font-[number:var(--td-font-weight)] tracking-[var(--td-letter-spacing)] leading-[var(--td-line-height)] absolute text-center left-1.5 top-5;
+  font-family: var(--td-font-family);
+  font-style: var(--td-font-style);
+}
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+.frame {
+  @apply items-center flex justify-between relative w-full;
+}
+.frame .div-2 {
+  @apply items-start inline-flex flex-[0_0_auto] flex-col gap-[15px] relative;
+}
+.frame .div-3 {
+  @apply items-center flex flex-[0_0_auto] justify-between relative w-[235px];
+}
+.frame .text-wrapper-4 {
+  @apply text-[color:var(--greymiddle)] text-[10px] font-medium tracking-[0] leading-[normal] relative text-center w-fit;
+  font-family: "Poppins-Medium", Helvetica;
+}
+.frame .text-wrapper-5 {
+  @apply text-[color:var(--noir)] text-xs font-normal tracking-[0] leading-[normal] relative text-center w-fit -mt-px;
+  font-family: "Poppins-Regular", Helvetica;
+}
+.frame .text-wrapper-6 {
+  @apply text-[color:var(--noir)] text-xs font-normal tracking-[0] leading-[normal] relative text-center underline w-fit -mt-px;
+  font-family: "Poppins-Regular", Helvetica;
+}
+.frame .div-4 {
+  @apply items-center inline-flex flex-[0_0_auto] gap-[5px] relative;
+}
+.frame .ellipse {
+  @apply bg-[color:var(--noir)] h-2.5 relative w-2.5 rounded-[5px];
+}
+.frame .stats-instance {
+  @apply flex-[0_0_auto];
+}
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+
+.frame .text-wrapper {
+  @apply text-[color:var(--noir)] text-base font-medium tracking-[0] leading-[normal] relative text-center w-fit -mt-px;
+  font-family: "Poppins-Medium", Helvetica;
+}
+.frame .text-wrapper-2 {
+  @apply text-[color:var(--greydark)] text-xs font-normal tracking-[0] leading-[normal] relative text-center w-fit;
+  font-family: "Poppins-Regular", Helvetica;
+}
+.frame .text-wrapper-3 {
+  @apply text-[color:var(--bluesea)] text-[10px] font-medium tracking-[0] leading-[normal] relative text-center w-fit;
+  font-family: "Poppins-Medium", Helvetica;
+}
+.frame .button-instance {
+  @apply flex h-[35px] w-[132px];
+}
+.frame .design-component-instance-node {
+  @apply mt-[-1.5px];
+}
+
+.stats .frame {
+  @apply relative px-12 left-[619px]  -ml-[522px];
+}
+
+.stats .text-wrapper {
+  @apply text-[color:var(--noir)] text-[42px] font-semibold tracking-[0] leading-[normal] relative text-center whitespace-nowrap -ml-[142px] w-fit -mt-px;
+  font-family: "Roboto Flex-SemiBold", Helvetica;
+}
+.stats .div-wrapper {
+  @apply items-center bg-[#d9ffdd] rounded inline-flex flex-[0_0_auto] gap-[5px] justify-center absolute -ml-[72px] p-[3px];
+}
+.stats .text-wrapper-2 {
+  @apply text-[#3dd943] text-[8px] font-semibold tracking-[0] leading-[normal]  relative text-center w-fit;
+  font-family: "Poppins-SemiBold", Helvetica;
+}
+.stats .element {
+  @apply relative;
+}
+
+.stats .taux-d-engagement {
+  @apply text-[color:var(--greydark)] font-semibold tracking-[0] leading-[normal] relative text-center w-fit -mt-px;
+  font-family: "Nunito-SemiBold", Helvetica;
+}
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+.info {
+  @apply m-52 mt-28 bg-[color:var(--white)] shadow-[0px_4px_15px_#0000001a] relative rounded-lg;
+}
+.info .frame-3 {
+  @apply items-start flex;
+}
+.info .informations-de-la {
+  @apply text-[color:var(--noir)] relative text-center w-fit -mt-px;
+}
+.info .button-2 {
+  @apply items-center flex gap-2.5 h-[35px] justify-center relative w-[166px] px-[15px] py-2.5 rounded-lg;
+}
+.info .ic-nes {
+  @apply h-[15px] relative w-[15px];
+}
+.info .class {
+  @apply h-[15px] ml-[-3.5px] relative w-[15px];
+}
+.info .modifier-la-campagne {
+  @apply text-[length:var(--button-font-size)] font-[number:var(--button-font-weight)] tracking-[var(--button-letter-spacing)] leading-[var(--button-line-height)] mt-[-1.5px] relative text-center w-fit;
+  font-family: var(--button-font-family);
+  font-style: var(--button-font-style);
+}
+.info .frame-4 {
+  @apply items-center inline-flex flex-[0_0_auto] relative;
+}
+.info .ellipse {
+  @apply h-20 object-cover relative w-20;
+}
+.info .ic-nes-instance {
+  @apply h-10 relative w-10;
+}
+.info .div-2 {
+  @apply items-start inline-flex flex-[0_0_auto] flex-col gap-[5px] relative pr-[722px];
+}
+.info .text-wrapper-3 {
+  @apply text-[color:var(--noir)] text-base font-medium tracking-[0] leading-[normal] relative text-center w-fit -mt-px;
+  font-family: "Poppins-Medium", Helvetica;
+}
+
+.info .text-wrapper-4 {
+  @apply text-[color:var(--greydark)] text-xs font-normal tracking-[0] leading-[normal] relative text-center w-fit;
+  font-family: "Poppins-Regular", Helvetica;
+}
+
+.info .btn {
+  @apply relative text-center w-fit;
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info .text-wrapper-5 {
+  @apply text-[color:var(--bluesea)]  text-[10px] font-medium tracking-[0] leading-[normal] relative text-center w-fit;
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info .text-wrapper-6 {
+  @apply text-[color:var(--noir)] text-[length:var(--h-2-font-size)] font-[number:var(--h-2-font-weight)] tracking-[var(--h-2-letter-spacing)] leading-[var(--h-2-line-height)] relative text-center w-fit -mt-px;
+  font-family: var(--h-2-font-family);
+  font-style: var(--h-2-font-style);
+}
+.info .button-instance {
+  @apply flex h-[35px] w-[132px];
+}
+.info .frame-5 {
+  @apply flex justify-between;
+}
+.info .frame-6 {
+  @apply items-start inline-flex flex-[0_0_auto] flex-col gap-[15px] relative -mb-0.5;
+}
+.info .frame-7 {
+  @apply items-center flex flex-[0_0_auto] justify-between relative w-[235px];
+}
+.info .div-3 {
+  @apply text-[color:var(--greymiddle)] text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)] relative text-center w-fit;
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info .priv-e {
+  @apply relative text-center w-fit -mt-px;
+}
+.info .div-4 {
+  @apply text-[color:var(--noir)] text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)] relative text-center w-fit -mt-px;
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.info .frame-8 {
+  @apply items-start inline-flex flex-[0_0_auto] flex-col gap-[15px] relative;
+}
+.info .actions-de-la {
+  @apply text-[color:var(--greymiddle)] relative text-center w-fit;
+}
+.info .frame-9 {
+  @apply flex flex-[0_0_auto] justify-between relative w-[235px];
+}
+.info .status-de-la {
+  @apply text-[color:var(--greymiddle)] relative text-center w-fit;
+}
+.info .text-wrapper-7 {
+  @apply text-[color:var(--greymiddle)] relative text-center w-fit;
+}
+.info .description {
+  @apply text-[color:var(--greymiddle)] relative text-center w-fit;
+}
+.info .voir-la-descriptions {
+  @apply text-[length:var(--text-link-font-size)] font-[number:var(--text-link-font-weight)] tracking-[var(--text-link-letter-spacing)] leading-[var(--text-link-line-height)] relative text-center underline w-fit -mt-px;
+  font-family: var(--text-link-font-family);
+  font-style: var(--text-link-font-style);
+}
+.info .frame-10 {
+  @apply items-start inline-flex flex-[0_0_auto] flex-col gap-[15px] relative;
+}
+.info .genre {
+  @apply text-[color:var(--greymiddle)] relative text-center w-fit;
+}
+.info .homme {
+  @apply text-[color:var(--noir)] relative text-center w-fit -mt-px;
+}
+.info .cr-dit-de-campagne {
+  @apply text-[color:var(--greymiddle)] relative text-center w-fit;
+}
+.info .element {
+  @apply relative text-center w-fit -mt-px;
+}
+.info .m-dia-de-la-campagne {
+  @apply text-[color:var(--greymiddle)] relative text-center w-fit;
+}
+.info .tout-voir {
+  @apply text-xs font-normal tracking-[0] leading-[normal] relative text-center w-fit -mt-px;
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info .div-5 {
+  @apply text-[color:var(--greymiddle)] text-[10px] font-medium tracking-[0] leading-[normal] relative text-center w-fit;
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info .div-6 {
+  @apply text-[color:var(--noir)] text-xs font-normal tracking-[0] leading-[normal] relative text-center w-fit -mt-px;
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info .stats-2 {
+  @apply items-start inline-flex flex-[0_0_auto] flex-col relative;
+}
+.info .frame-11 {
+  @apply items-center inline-flex flex-[0_0_auto] gap-[5px] justify-center relative;
+}
+.info .text-wrapper-8 {
+  @apply text-[color:var(--greydark)] text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)] relative text-center w-fit -mt-px;
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info .polygon {
+  @apply h-[7.5px] relative w-[8.66px];
+}
+.info .text-wrapper-9 {
+  @apply text-[color:var(--noir)] text-[22px] font-semibold tracking-[0] leading-[normal] relative text-center whitespace-nowrap w-fit;
+  font-family: "Roboto Flex-SemiBold", Helvetica;
+}
+.info .frame-12 {
+  @apply items-center inline-flex flex-[0_0_auto] gap-[5px] relative;
+}
+.info .ellipse-2 {
+  @apply bg-[color:var(--noir)] h-2.5 relative w-2.5 rounded-[5px];
+}
+.info .text-wrapper-10 {
+  @apply text-[color:var(--noir)] text-xs font-normal tracking-[0] leading-[normal] relative text-right underline w-[146px] -mt-px;
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info .stats-3 {
+  @apply items-start inline-flex flex-[0_0_auto] flex-col relative;
+}
+.info .stats-instance {
+  @apply flex-[0_0_auto];
+}
+.info .frame-13 {
+  @apply items-start self-stretch flex flex-[0_0_auto] justify-between relative w-full;
+}
+.info .button-3 {
+  @apply items-center bg-[color:var(--white)] border border-[color:var(--noir)] box-border flex gap-2.5 h-[35px] justify-center relative w-[166px] px-[15px] py-2.5 rounded-lg border-solid;
+  all: unset;
+}
+.info .modifier-la-campagne-2 {
+  @apply text-[color:var(--noir)] text-[length:var(--button-font-size)] font-[number:var(--button-font-weight)] tracking-[var(--button-letter-spacing)] leading-[var(--button-line-height)] mt-[-1.5px] relative text-center w-fit;
+  font-family: var(--button-font-family);
+  font-style: var(--button-font-style);
+}
+.info .frame-14 {
+  @apply items-start self-stretch flex flex-[0_0_auto] flex-col gap-[15px] relative w-full;
+}
+.info .frame-15 {
+  @apply items-center self-stretch flex flex-[0_0_auto] justify-between relative w-full;
+}
+.info.two {
+  @apply h-[260px] w-[723px];
+}
+.info.profil {
+  @apply items-start inline-flex flex-col gap-5 p-[25px];
+}
+.info.col-5 {
+  @apply items-start inline-flex flex-col gap-[25px] p-[25px];
+}
+.info.full {
+  @apply items-start inline-flex flex-col gap-[25px] p-[25px];
+}
+.info.col-6 {
+  @apply items-start flex flex-col gap-[25px] w-[567px] p-[25px];
+}
+.info.col-4 {
+  @apply items-start inline-flex flex-col gap-5 p-[25px];
+}
+.info.two .frame-3 {
+  @apply justify-between absolute w-[673px] left-[25px] top-[25px];
+}
+.info.profil .frame-3 {
+  @apply flex-[0_0_auto] justify-between relative w-[1100px];
+}
+.info.col-5 .frame-3 {
+  @apply flex-[0_0_auto] justify-between relative w-[1100px];
+}
+.info.full .frame-3 {
+  @apply flex-[0_0_auto] justify-between relative w-[1100px];
+}
+.info.col-6 .frame-3 {
+  @apply relative w-[1100px];
+}
+.info.col-4 .frame-3 {
+  @apply flex-[0_0_auto] gap-5 relative w-[1100px];
+}
+.info.two .informations-de-la {
+  @apply text-base font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.profil .informations-de-la {
+  @apply text-[length:var(--h-2-font-size)] font-[number:var(--h-2-font-weight)] tracking-[var(--h-2-letter-spacing)] leading-[var(--h-2-line-height)];
+  font-family: var(--h-2-font-family);
+}
+.info.col-5 .informations-de-la {
+  @apply text-[length:var(--h-2-font-size)] font-[number:var(--h-2-font-weight)] tracking-[var(--h-2-letter-spacing)] leading-[var(--h-2-line-height)];
+  font-family: var(--h-2-font-family);
+  font-style: var(--h-2-font-style);
+}
+.info.full .informations-de-la {
+  @apply text-[length:var(--h-2-font-size)] font-[number:var(--h-2-font-weight)] tracking-[var(--h-2-letter-spacing)] leading-[var(--h-2-line-height)];
+  font-family: var(--h-2-font-family);
+  font-style: var(--h-2-font-style);
+}
+.info.col-6 .informations-de-la {
+  @apply text-[length:var(--h-2-font-size)] font-[number:var(--h-2-font-weight)] tracking-[var(--h-2-letter-spacing)] leading-[var(--h-2-line-height)];
+  font-family: var(--h-2-font-family);
+}
+.info.col-4 .informations-de-la {
+  @apply text-[length:var(--h-2-font-size)] font-[number:var(--h-2-font-weight)] tracking-[var(--h-2-letter-spacing)] leading-[var(--h-2-line-height)];
+  font-family: var(--h-2-font-family);
+}
+.info.two .button-2 {
+  @apply bg-[color:var(--bleumiddle)];
+}
+.info.profil .button-2 {
+  @apply bg-[color:var(--white)];
+}
+.info.col-5 .button-2 {
+  @apply bg-[color:var(--white)] border border-[color:var(--noir)] border-solid;
+}
+.info.full .button-2 {
+  @apply bg-[color:var(--white)] border border-[color:var(--noir)] border-solid;
+}
+.info.col-6 .button-2 {
+  @apply bg-[color:var(--white)];
+}
+.info.col-4 .button-2 {
+  @apply bg-[color:var(--white)];
+}
+.info.two .modifier-la-campagne {
+  @apply text-[color:var(--white)] mr-[-3.5px];
+}
+.info.profil .modifier-la-campagne {
+  @apply text-[color:var(--noir)];
+}
+.info.col-5 .modifier-la-campagne {
+  @apply text-[color:var(--noir)];
+}
+.info.full .modifier-la-campagne {
+  @apply text-[color:var(--noir)] mr-[-3.5px];
+}
+.info.col-6 .modifier-la-campagne {
+  @apply text-[color:var(--noir)];
+}
+.info.col-4 .modifier-la-campagne {
+  @apply text-[color:var(--noir)];
+}
+.info.two .frame-4 {
+  @apply gap-[5px];
+}
+.info.profil .frame-4 {
+  @apply gap-[5px];
+}
+.info.col-5 .frame-4 {
+  @apply gap-[5px];
+}
+.info.full .frame-4 {
+  @apply gap-[5px];
+}
+.info.col-6 .frame-4 {
+  @apply gap-[5px];
+}
+.info.col-4 .frame-4 {
+  @apply gap-2.5;
+}
+.info.two .frame-5 {
+  @apply items-start absolute w-[673px] left-[25px] top-[85px];
+}
+.info.profil .frame-5 {
+  @apply items-center flex-[0_0_auto] relative w-[1100px];
+}
+.info.col-5 .frame-5 {
+  @apply items-start h-[51px] relative w-[1100px];
+}
+.info.full .frame-5 {
+  @apply items-start h-[51px] relative w-[1100px];
+}
+.info.col-6 .frame-5 {
+  @apply items-start relative w-[1100px];
+}
+.info.col-4 .frame-5 {
+  @apply items-center flex-[0_0_auto] relative w-[1100px];
+}
+.info.two .priv-e {
+  @apply text-[color:var(--noir)] text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)];
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.info.profil .priv-e {
+  @apply text-[color:var(--noir)] text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)];
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.info.col-5 .priv-e {
+  @apply text-[color:var(--greenmiddle)] text-[length:var(--text-link-font-size)] font-[number:var(--text-link-font-weight)] tracking-[var(--text-link-letter-spacing)] leading-[var(--text-link-line-height)] underline;
+  font-family: var(--text-link-font-family);
+  font-style: var(--text-link-font-style);
+}
+.info.full .priv-e {
+  @apply text-[color:var(--noir)] text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)];
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.info.col-6 .priv-e {
+  @apply text-[color:var(--noir)] text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)];
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.info.col-4 .priv-e {
+  @apply text-[color:var(--noir)] text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)];
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.info.two .frame-8 {
+  @apply -mb-0.5;
+}
+.info.profil .frame-8 {
+  @apply -mb-0.5;
+}
+.info.col-5 .frame-8 {
+  @apply mb-[-21px];
+}
+.info.full .frame-8 {
+  @apply -mb-0.5;
+}
+.info.col-6 .frame-8 {
+  @apply -mb-0.5;
+}
+.info.col-4 .frame-8 {
+  @apply -mb-0.5;
+}
+.info.two .actions-de-la {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.profil .actions-de-la {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-5 .actions-de-la {
+  @apply text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)] -mt-px;
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.info.full .actions-de-la {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-6 .actions-de-la {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-4 .actions-de-la {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.two .frame-9 {
+  @apply items-center;
+}
+.info.profil .frame-9 {
+  @apply items-center;
+}
+.info.col-5 .frame-9 {
+  @apply items-start;
+}
+.info.full .frame-9 {
+  @apply items-center;
+}
+.info.col-6 .frame-9 {
+  @apply items-center;
+}
+.info.col-4 .frame-9 {
+  @apply items-center;
+}
+.info.two .status-de-la {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.profil .status-de-la {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-5 .status-de-la {
+  @apply text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)] -mt-px;
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.info.full .status-de-la {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-6 .status-de-la {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-4 .status-de-la {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.two .text-wrapper-7 {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.profil .text-wrapper-7 {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-5 .text-wrapper-7 {
+  @apply text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)] -mt-px;
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.info.full .text-wrapper-7 {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-6 .text-wrapper-7 {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-4 .text-wrapper-7 {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.two .description {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.profil .description {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-5 .description {
+  @apply text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)] -mt-px;
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.info.full .description {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-6 .description {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.col-4 .description {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.two .voir-la-descriptions {
+  @apply text-[color:var(--bleumiddle)];
+}
+.info.profil .voir-la-descriptions {
+  @apply text-[color:var(--bleumiddle)];
+}
+.info.col-5 .voir-la-descriptions {
+  @apply text-[color:var(--greenmiddle)];
+}
+.info.full .voir-la-descriptions {
+  @apply text-[color:var(--bleumiddle)];
+}
+.info.col-6 .voir-la-descriptions {
+  @apply text-[color:var(--bleumiddle)];
+}
+.info.col-4 .voir-la-descriptions {
+  @apply text-[color:var(--bleumiddle)];
+}
+.info.two .genre {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.profil .genre {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.col-5 .genre {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.full .genre {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.col-6 .genre {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.col-4 .genre {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.two .homme {
+  @apply text-xs font-normal tracking-[0] leading-[normal];
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info.profil .homme {
+  @apply text-xs font-normal tracking-[0] leading-[normal];
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info.col-5 .homme {
+  @apply text-xs font-normal tracking-[0] leading-[normal];
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info.full .homme {
+  @apply text-xs font-normal tracking-[0] leading-[normal];
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info.col-6 .homme {
+  @apply text-xs font-normal tracking-[0] leading-[normal];
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info.col-4 .homme {
+  @apply text-[length:var(--text-info-font-size)] font-[number:var(--text-info-font-weight)] tracking-[var(--text-info-letter-spacing)] leading-[var(--text-info-line-height)];
+  font-family: var(--text-info-font-family);
+  font-style: var(--text-info-font-style);
+}
+.info.two .cr-dit-de-campagne {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.profil .cr-dit-de-campagne {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.col-5 .cr-dit-de-campagne {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.full .cr-dit-de-campagne {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.col-6 .cr-dit-de-campagne {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.col-4 .cr-dit-de-campagne {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.two .element {
+  @apply text-[color:var(--noir)] text-xs font-normal tracking-[0] leading-[normal];
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info.profil .element {
+  @apply text-[color:var(--noir)] text-xs font-normal tracking-[0] leading-[normal];
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info.col-5 .element {
+  @apply text-[color:var(--noir)] text-xs font-normal tracking-[0] leading-[normal];
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info.full .element {
+  @apply text-[color:var(--noir)] text-xs font-normal tracking-[0] leading-[normal];
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info.col-6 .element {
+  @apply text-[color:var(--noir)] text-xs font-normal tracking-[0] leading-[normal];
+  font-family: "Poppins-Regular", Helvetica;
+}
+.info.col-4 .element {
+  @apply text-[color:var(--bleumiddle)] text-[length:var(--text-link-font-size)] font-[number:var(--text-link-font-weight)] tracking-[var(--text-link-letter-spacing)] leading-[var(--text-link-line-height)] underline;
+  font-family: var(--text-link-font-family);
+  font-style: var(--text-link-font-style);
+}
+.info.two .m-dia-de-la-campagne {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.profil .m-dia-de-la-campagne {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.col-5 .m-dia-de-la-campagne {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.full .m-dia-de-la-campagne {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.col-6 .m-dia-de-la-campagne {
+  @apply text-[10px] font-medium tracking-[0] leading-[normal];
+  font-family: "Poppins-Medium", Helvetica;
+}
+.info.col-4 .m-dia-de-la-campagne {
+  @apply text-[length:var(--label-stat-font-size)] font-[number:var(--label-stat-font-weight)] tracking-[var(--label-stat-letter-spacing)] leading-[var(--label-stat-line-height)];
+  font-family: var(--label-stat-font-family);
+  font-style: var(--label-stat-font-style);
+}
+.info.two .tout-voir {
+  @apply text-[color:var(--noir)] underline;
+}
+.info.profil .tout-voir {
+  @apply text-[color:var(--noir)] underline;
+}
+.info.col-5 .tout-voir {
+  @apply text-[color:var(--noir)];
+}
+.info.full .tout-voir {
+  @apply text-[color:var(--noir)];
+}
+.info.col-6 .tout-voir {
+  @apply text-[color:var(--noir)];
+}
+.info.col-4 .tout-voir {
+  @apply text-[color:var(--bleumiddle)];
+}
+.info.two .stats-2 {
+  @apply gap-[15px];
+}
+.info.profil .stats-2 {
+  @apply gap-[15px];
+}
+.info.col-5 .stats-2 {
+  @apply gap-[15px];
+}
+.info.full .stats-2 {
+  @apply gap-[15px];
+}
+.info.col-6 .stats-2 {
+  @apply gap-[15px];
+}
+.info.col-4 .stats-2 {
+  @apply gap-[5px];
+}
+.info.two .stats-3 {
+  @apply gap-[5px];
+}
+.info.profil .stats-3 {
+  @apply gap-[15px];
+}
+.info.col-5 .stats-3 {
+  @apply gap-[5px];
+}
+.info.full .stats-3 {
+  @apply gap-[5px];
+}
+.info.col-6 .stats-3 {
+  @apply gap-[5px];
+}
+.info.col-4 .stats-3 {
+  @apply gap-[5px];
+}
